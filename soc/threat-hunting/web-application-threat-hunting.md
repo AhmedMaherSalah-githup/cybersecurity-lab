@@ -66,6 +66,7 @@ Investigate context
 Determine security significance
     ↓
 Recommend response
+```
 
 Threat hunting is different from simple alert monitoring.
 
