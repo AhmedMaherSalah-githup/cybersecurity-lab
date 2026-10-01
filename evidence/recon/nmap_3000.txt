@@ -1,0 +1,40 @@
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-09-29 01:04 EEST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00016s latency).
+
+PORT     STATE SERVICE VERSION
+3000/tcp open  ppp?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3000-TCP:V=7.94SVN%I=7%D=9/29%Time=6ABAE492%P=x86_64-pc-linux-gnu%r
+SF:(GetRequest,2668,"HTTP/1\.1\x20200\x20OK\r\nAccess-Control-Allow-Origin
+SF::\x20\*\r\nX-Content-Type-Options:\x20nosniff\r\nX-Frame-Options:\x20SA
+SF:MEORIGIN\r\nFeature-Policy:\x20payment\x20'self'\r\nX-Recruiting:\x20/#
+SF:/jobs\r\nAccept-Ranges:\x20bytes\r\nCache-Control:\x20public,\x20max-ag
+SF:e=0\r\nLast-Modified:\x20Mon,\x2028\x20Sep\x202026\x2021:54:55\x20GMT\r
+SF:\nETag:\x20W/\"24b1-1a0ea038839\"\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=UTF-8\r\nContent-Length:\x209393\r\nVary:\x20Accept-Encoding\r\nDa
+SF:te:\x20Mon,\x2028\x20Sep\x202026\x2022:05:06\x20GMT\r\nConnection:\x20c
+SF:lose\r\n\r\n<!--\n\x20\x20~\x20Copyright\x20\(c\)\x202014-2026\x20Bjoer
+SF:n\x20Kimminich\x20&\x20the\x20OWASP\x20Juice\x20Shop\x20contributors\.\
+SF:n\x20\x20~\x20SPDX-License-Identifier:\x20MIT\n\x20\x20-->\n\n<!doctype
+SF:\x20html>\n<html\x20lang=\"en\"\x20data-beasties-container>\n<head>\n\x
+SF:20\x20<meta\x20charset=\"utf-8\">\n\x20\x20<title>OWASP\x20Juice\x20Sho
+SF:p</title>\n\x20\x20<meta\x20name=\"description\"\x20content=\"Probably\
+SF:x20the\x20most\x20modern\x20and\x20sophisticated\x20insecure\x20web\x20
+SF:application\">\n\x20\x20<meta\x20name=\"viewport\"\x20content=\"width=d
+SF:evice-width,\x20initial-scale=1\">\n\x20\x20<link\x20rel=\"preconnect\"
+SF:\x20href=\"htt")%r(Help,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConne
+SF:ction:\x20close\r\n\r\n")%r(NCP,2F,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nConnection:\x20close\r\n\r\n")%r(HTTPOptions,EA,"HTTP/1\.1\x20204\x2
+SF:0No\x20Content\r\nAccess-Control-Allow-Origin:\x20\*\r\nAccess-Control-
+SF:Allow-Methods:\x20GET,HEAD,PUT,PATCH,POST,DELETE\r\nVary:\x20Access-Con
+SF:trol-Request-Headers\r\nContent-Length:\x200\r\nDate:\x20Mon,\x2028\x20
+SF:Sep\x202026\x2022:05:06\x20GMT\r\nConnection:\x20close\r\n\r\n")%r(RTSP
+SF:Request,EA,"HTTP/1\.1\x20204\x20No\x20Content\r\nAccess-Control-Allow-O
+SF:rigin:\x20\*\r\nAccess-Control-Allow-Methods:\x20GET,HEAD,PUT,PATCH,POS
+SF:T,DELETE\r\nVary:\x20Access-Control-Request-Headers\r\nContent-Length:\
+SF:x200\r\nDate:\x20Mon,\x2028\x20Sep\x202026\x2022:05:06\x20GMT\r\nConnec
+SF:tion:\x20close\r\n\r\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 11.67 seconds

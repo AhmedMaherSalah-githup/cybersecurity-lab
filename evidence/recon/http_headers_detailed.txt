@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Mon, 28 Sep 2026 21:54:55 GMT
+ETag: W/"24b1-1a0ea038839"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 9393
+Vary: Accept-Encoding
+Date: Mon, 28 Sep 2026 22:20:47 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+

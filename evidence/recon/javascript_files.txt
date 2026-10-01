@@ -1,0 +1,3 @@
+<script src="polyfills.js"
+<script src="scripts.js"
+<script src="main.js"
