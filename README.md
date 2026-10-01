@@ -113,7 +113,7 @@ The observed JWT algorithm was:
 
 An authenticated request using:
 
-`Authorization: Bearer <JWT>`
+A valid laboratory JWT was supplied for authenticated requests.
 
 returned:
 
