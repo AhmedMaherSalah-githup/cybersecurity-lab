@@ -30,6 +30,9 @@ Security Testing Host
 Docker Container
 OWASP Juice Shop
 Node.js / Express
+
+```
+
 ## Environment
 
 | Component | Details |
