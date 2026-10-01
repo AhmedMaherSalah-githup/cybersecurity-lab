@@ -13,6 +13,7 @@ It does not perform network scanning or exploitation.
 import re
 import sys
 from collections import Counter, defaultdict
+from datetime import datetime, timedelta
 from pathlib import Path
 
 
@@ -66,7 +67,7 @@ def analyze_events(events):
 
     findings = []
 
-    auth_failures = Counter()
+    auth_failures = defaultdict(list)
     paths_by_ip = defaultdict(set)
     server_errors = Counter()
     jwt_failures = Counter()
@@ -79,7 +80,9 @@ def analyze_events(events):
         paths_by_ip[source_ip].add(path)
 
         if path == LOGIN_PATH and status == 401:
-            auth_failures[source_ip] += 1
+            auth_failures[source_ip].append(
+                datetime.fromisoformat(event["timestamp"])
+            )
 
         if status >= 500:
             server_errors[source_ip] += 1
@@ -87,18 +90,31 @@ def analyze_events(events):
         if "invalid" in path.lower() and "signature" in path.lower():
             jwt_failures[source_ip] += 1
 
-    for source_ip, count in auth_failures.items():
-        if count >= AUTH_FAILURE_THRESHOLD:
-            findings.append(
-                {
-                    "type": "AUTHENTICATION_ABUSE",
-                    "source_ip": source_ip,
-                    "details": (
-                        f"{count} failed authentication attempts "
-                        f"against {LOGIN_PATH}"
-                    ),
-                }
+    for source_ip, timestamps in auth_failures.items():
+        timestamps.sort()
+
+        for index, start_time in enumerate(timestamps):
+            window_end = start_time + timedelta(minutes=TIME_WINDOW_MINUTES)
+
+            window_count = sum(
+                1
+                for timestamp in timestamps[index:]
+                if timestamp <= window_end
             )
+
+            if window_count >= AUTH_FAILURE_THRESHOLD:
+                findings.append(
+                    {
+                        "type": "AUTHENTICATION_ABUSE",
+                        "source_ip": source_ip,
+                        "details": (
+                            f"{window_count} failed authentication attempts "
+                            f"against {LOGIN_PATH} within "
+                            f"{TIME_WINDOW_MINUTES} minutes"
+                        ),
+                    }
+                )
+                break
 
     for source_ip, paths in paths_by_ip.items():
         suspicious_paths = [
