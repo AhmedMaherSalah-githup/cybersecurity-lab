@@ -1,0 +1,11 @@
+2026-10-01T16:00:00 10.0.2.15 GET /rest/products 200 curl/8.5.0
+2026-10-01T16:00:10 10.0.2.15 GET /rest/admin 500 curl/8.5.0
+2026-10-01T16:00:20 10.0.2.15 GET /rest/unknown 500 curl/8.5.0
+2026-10-01T16:00:30 10.0.2.15 GET /rest/test 500 curl/8.5.0
+2026-10-01T16:00:40 10.0.2.15 GET /rest/debug 500 curl/8.5.0
+2026-10-01T16:00:50 10.0.2.15 GET /rest/internal 500 curl/8.5.0
+2026-10-01T16:01:00 10.0.2.15 POST /rest/user/login 401 curl/8.5.0
+2026-10-01T16:01:10 10.0.2.15 POST /rest/user/login 401 curl/8.5.0
+2026-10-01T16:01:20 10.0.2.15 POST /rest/user/login 401 curl/8.5.0
+2026-10-01T16:01:30 10.0.2.15 POST /rest/user/login 401 curl/8.5.0
+2026-10-01T16:01:40 10.0.2.15 POST /rest/user/login 401 curl/8.5.0
