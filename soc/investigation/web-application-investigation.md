@@ -26,6 +26,7 @@ Individually, these events may have legitimate explanations.
 
 When correlated by source IP, timestamp, endpoint, and authentication result, they can provide stronger investigative context.
 
+```
 
 ---
 
