@@ -59,6 +59,8 @@ Detect repeated failed authentication attempts against web application authentic
 
 ```text
 /rest/user/login
+```
+
 
 Detection Logic
 
